@@ -75,6 +75,7 @@ class OpenAIHelper:
         :param config: A dictionary containing the GPT configuration
         """
         openai.api_key = config['api_key']
+        openai.api_base = config['api_base']
         openai.proxy = config['proxy']
         self.config = config
         self.conversations: dict[int: list] = {}  # {chat_id: history}
